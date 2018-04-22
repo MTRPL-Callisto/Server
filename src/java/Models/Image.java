@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
-public class Image {
+public class Image implements Comparable{
     private String title;
     private byte[] image;
     private int photoId;
@@ -15,9 +15,16 @@ public class Image {
     public Image() {
     }
 
+    public Image(String title, byte[] image) {
+        String timeStamp = new SimpleDateFormat("dd.MM.yyyy.HH:mm:ss").format(new Date());
+        this.title = title + "_img_" + timeStamp;
+        this.image = image;
+    }
+    
+
     @XmlElement
     public String getTitle() {
-        return title;
+        return title.substring(0, title.indexOf("_img_"));
     }
 
     public void setTitle(String title) {
@@ -34,8 +41,8 @@ public class Image {
         return image;
     }
 
-    public void setImage(String photoInBase64) {
-        byte[] image = Base64.getDecoder().decode(photoInBase64);
+
+    public void setImage(byte[] image) {
         this.image = image;
     }
     
@@ -48,5 +55,9 @@ public class Image {
         return this.photoId;
     }
     
+    @Override
+    public int compareTo(Object o) {
+        return this.photoId - ((Image)o).getPhotoId();
+    } 
     
 }

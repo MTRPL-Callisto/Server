@@ -8,11 +8,6 @@ public class Category implements Comparable {
     private String categoryName;
     private int categoryId;
     
-    public Category(String name, int id) {
-        this.categoryName = name;
-        this.categoryId = id;
-    }
-    
     public Category() {
       
     }
