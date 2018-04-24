@@ -25,9 +25,48 @@ public class GlobalModel {
         return this.categories;
     }
     
+    public Category getCategoryByName(String name) {
+        for (Category c : categories) {
+            if (c.getCategoryName().equals(name)) {
+                return c;
+            }
+        }
+        return null;
+    }
+    
     public List<Image> getImages() {
         Collections.sort(images);
         return this.images;
+    }    
+    
+    public Image getImageById(int requestedId) {
+        for (Image i : images) {
+            if (i.getPhotoId() == requestedId) {
+                return i;
+            }
+        }
+        return null;
+    }
+    
+    public List<Image> getImagesInCategory(String categoryName) {
+        List<Image> imagesInCategory = new ArrayList();
+        
+        for (Image i : images) {
+            if (i.getCategoryName().equals(categoryName)) {
+                imagesInCategory.add(i);
+            }
+        }
+        
+        if (imagesInCategory.isEmpty()) return null;
+        else return imagesInCategory;
+    }
+    
+    public void categorizeImage(int imageId, String categoryName) {
+        for (Image i : images) {
+            if (i.getPhotoId() == imageId) {
+                i.setCategoryName(categoryName);
+            }
+        }
     }
     
     public void addImage(Image newImage) {
@@ -44,4 +83,5 @@ public class GlobalModel {
         
         images.add(newImage);
     }
+
 }

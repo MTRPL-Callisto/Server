@@ -11,6 +11,7 @@ public class Image implements Comparable{
     private String title;
     private byte[] image;
     private int photoId;
+    private String categoryName;
 
     public Image() {
     }
@@ -53,6 +54,14 @@ public class Image implements Comparable{
     @XmlElement
     public int getPhotoId() {
         return this.photoId;
+    }
+
+    public String getCategoryName() {
+        return categoryName;
+    }
+
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
     }
     
     @Override

@@ -7,6 +7,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class Category implements Comparable {
     private String categoryName;
     private int categoryId;
+    private String description;
     
     public Category() {
       
@@ -28,6 +29,14 @@ public class Category implements Comparable {
 
     public void setCategoryName(String categoryName) {
         this.categoryName = categoryName ;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     @Override
