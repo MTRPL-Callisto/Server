@@ -9,6 +9,7 @@ public class GlobalModel {
     private final List<Image> images = new ArrayList();
     
     private GlobalModel() {
+        initCategories();
     }
     
     public static GlobalModel getInstance() {
@@ -19,6 +20,8 @@ public class GlobalModel {
 
         private static final GlobalModel INSTANCE = new GlobalModel();
     }
+    
+    
     
     public List<Category> getCategories() {
         Collections.sort(categories);
@@ -61,14 +64,6 @@ public class GlobalModel {
         else return imagesInCategory;
     }
     
-    public void categorizeImage(int imageId, String categoryName) {
-        for (Image i : images) {
-            if (i.getPhotoId() == imageId) {
-                i.setCategoryName(categoryName);
-            }
-        }
-    }
-    
     public void addImage(Image newImage) {
         int photoId;
         
@@ -82,6 +77,11 @@ public class GlobalModel {
         newImage.setPhotoId(photoId);
         
         images.add(newImage);
+    }
+    
+    
+    private void initCategories() {
+        //TODO: add categories and their info
     }
 
 }
