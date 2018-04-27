@@ -16,10 +16,11 @@ public class Image implements Comparable{
     public Image() {
     }
 
-    public Image(String title, byte[] image) {
+    public Image(String title, byte[] image, String categoryName) {
         String timeStamp = new SimpleDateFormat("dd.MM.yyyy.HH:mm:ss").format(new Date());
         this.title = title + "_img_" + timeStamp;
         this.image = image;
+        this.categoryName = categoryName;
     }
     
 
