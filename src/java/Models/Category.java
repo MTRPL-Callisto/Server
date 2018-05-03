@@ -10,13 +10,13 @@ public class Category implements Comparable {
     private String categoryName;
     private int categoryId;
     private String description;
-    private Set<Point2D> recyclingPoints;
+    private Set<Point2D.Double> recyclingPoints;
     
     public Category() {
       
     }
 
-    public Category(String categoryName, int categoryId, String description, Set<Point2D> recyclingPoints) {
+    public Category(String categoryName, int categoryId, String description, Set<Point2D.Double> recyclingPoints) {
         this.categoryName = categoryName;
         this.categoryId = categoryId;
         this.description = description;
@@ -41,6 +41,7 @@ public class Category implements Comparable {
         this.categoryName = categoryName ;
     }
 
+    @XmlElement
     public String getDescription() {
         return description;
     }
@@ -49,11 +50,12 @@ public class Category implements Comparable {
         this.description = description;
     }
 
-    public Set<Point2D> getRecyclingPoints() {
+    @XmlElement
+    public Set<Point2D.Double> getRecyclingPoints() {
         return recyclingPoints;
     }
 
-    public void setRecyclingPoints(Set<Point2D> recyclingPoints) {
+    public void setRecyclingPoints(Set<Point2D.Double> recyclingPoints) {
         this.recyclingPoints = recyclingPoints;
     }
 

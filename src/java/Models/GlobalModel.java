@@ -98,12 +98,73 @@ public class GlobalModel {
         
         //Plastic
         Set<Point2D.Double> recyclingPoints1 = new HashSet<>();
+        
         recyclingPoints1.add(sello);
         recyclingPoints1.add(HMARC);
         recyclingPoints1.add(sMarketKonala);
         recyclingPoints1.add(kMarketKilo);
         
-        //TODO: add categories and their info
+        Category plastic = new Category("Plastic", 1, "Many types of plastics are accepted by commercial recyclers by contract or as part of co-mingled recycling, where they collected, shredded and extruded for use in new plastic products.", recyclingPoints1);
+        
+        //Paper & Cardboard
+        Set<Point2D.Double> recyclingPoints2 = new HashSet<>();
+        
+        recyclingPoints2.add(sello);
+        recyclingPoints2.add(HMARC);
+        recyclingPoints2.add(sorttiAsemaKonala);
+        recyclingPoints2.add(sMarketKonala);
+        recyclingPoints2.add(sorttiAsemaRuskeasanta);
+        recyclingPoints2.add(sorttiAsemaKivikko);
+        recyclingPoints2.add(kMarketKilo);
+        
+        Category paperAndCardboard = new Category("Paper & Cardboard", 2, "Clean mixed paper and cardboard is recycled into a variety of paper products. Lower grade products can be recycled or composted as organic waste.", recyclingPoints2);
+    
+        //Metal
+        Set<Point2D.Double> recyclingPoints3 = new HashSet<>();
+        
+        recyclingPoints3.add(sello);
+        recyclingPoints3.add(HMARC);
+        recyclingPoints3.add(sorttiAsemaKonala);
+        recyclingPoints3.add(sMarketKonala);
+        recyclingPoints3.add(sorttiAsemaRuskeasanta);
+        recyclingPoints3.add(sorttiAsemaKivikko);
+        recyclingPoints3.add(kMarketKilo);
+        
+        Category metal = new Category("Metal", 3, "Making products from recycled metals uses less energy, reduces carbon emissions and uses less water compared with using raw materials.", recyclingPoints3);
+    
+        //Glass
+        Set<Point2D.Double> recyclingPoints4 = new HashSet<>();
+        
+        recyclingPoints4.add(sello);
+        recyclingPoints4.add(HMARC);
+        recyclingPoints4.add(sorttiAsemaKonala);
+        recyclingPoints4.add(sMarketKonala);
+        recyclingPoints4.add(sorttiAsemaRuskeasanta);
+        recyclingPoints4.add(sorttiAsemaKivikko);
+        recyclingPoints4.add(kMarketKilo);
+        
+        Category glass = new Category("Glass", 4, "Glass is completely recyclable and saves precious energy resources. Making products from recycled glass uses less energy than starting from scratch. Recycled glass is made into new beverage bottles, food jars, insulation and other construction materials.", recyclingPoints4);
+    
+        //Electrical Waste
+        Set<Point2D.Double> recyclingPoints5 = new HashSet<>();
+        
+        recyclingPoints5.add(HMARC);
+        recyclingPoints5.add(giganttiForum);
+        recyclingPoints5.add(verkkokauppa);
+        recyclingPoints5.add(giganttiLommila);
+        recyclingPoints5.add(sorttiAsemaKonala);
+        recyclingPoints5.add(sorttiAsemaRuskeasanta);
+        recyclingPoints5.add(sorttiAsemaKivikko);
+        
+        Category electricalWaste = new Category("Electrical Waste", 5, "The volume of e-waste is growing three times faster than other waste streams. Used electronic equipment contains valuable resources such as precious metals and can be toxic to the environment if placed in landfill.", recyclingPoints5);
+    
+        //Add categories to list
+        categories.add(plastic);
+        categories.add(paperAndCardboard);
+        categories.add(metal);
+        categories.add(glass);
+        categories.add(electricalWaste);
+        
     }
 
 }
