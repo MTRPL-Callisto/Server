@@ -38,7 +38,7 @@ public class ImagesREST {
     }
     
     @GET
-    @Path("{imageId}")
+    @Path("/{imageId}")
     @Produces(MediaType.APPLICATION_JSON)
     public Image getImagesById(@PathParam("imageId") int requestedId){
         return GlobalModel.getInstance().getImageById(requestedId);

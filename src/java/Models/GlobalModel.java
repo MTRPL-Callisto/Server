@@ -1,8 +1,11 @@
 package Models;
 
+import java.awt.geom.Point2D;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class GlobalModel {
     private final List<Category> categories = new ArrayList();
@@ -81,6 +84,25 @@ public class GlobalModel {
     
     
     private void initCategories() {
+        //Recycling Points
+        Point2D.Double sello = new Point2D.Double(60.21820809999999, 24.811967600000003);
+        Point2D.Double HMARC = new Point2D.Double(60.2198613, 24.664098100000047);
+        Point2D.Double giganttiForum = new Point2D.Double(60.169132, 24.937878899999987);
+        Point2D.Double verkkokauppa = new Point2D.Double(60.15638089999999, 24.92093729999999);
+        Point2D.Double giganttiLommila = new Point2D.Double(60.2198613, 24.664098100000047);
+        Point2D.Double sorttiAsemaKonala = new Point2D.Double(60.25141129999999, 24.83332489999998);
+        Point2D.Double sorttiAsemaRuskeasanta = new Point2D.Double(60.321016, 24.99305800000002);
+        Point2D.Double sorttiAsemaKivikko = new Point2D.Double(60.236787,25.05102599999998);
+        Point2D.Double sMarketKonala = new Point2D.Double(60.24477779999999, 24.846507100000053);
+        Point2D.Double kMarketKilo = new Point2D.Double(60.21699820000001, 24.78197499999999);
+        
+        //Plastic
+        Set<Point2D.Double> recyclingPoints1 = new HashSet<>();
+        recyclingPoints1.add(sello);
+        recyclingPoints1.add(HMARC);
+        recyclingPoints1.add(sMarketKonala);
+        recyclingPoints1.add(kMarketKilo);
+        
         //TODO: add categories and their info
     }
 
