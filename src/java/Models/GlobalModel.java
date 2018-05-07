@@ -85,19 +85,19 @@ public class GlobalModel {
     
     private void initCategories() {
         //Recycling Points
-        Point2D.Double sello = new Point2D.Double(60.21820809999999, 24.811967600000003);
-        Point2D.Double HMARC = new Point2D.Double(60.2198613, 24.664098100000047);
-        Point2D.Double giganttiForum = new Point2D.Double(60.169132, 24.937878899999987);
-        Point2D.Double verkkokauppa = new Point2D.Double(60.15638089999999, 24.92093729999999);
-        Point2D.Double giganttiLommila = new Point2D.Double(60.2198613, 24.664098100000047);
-        Point2D.Double sorttiAsemaKonala = new Point2D.Double(60.25141129999999, 24.83332489999998);
-        Point2D.Double sorttiAsemaRuskeasanta = new Point2D.Double(60.321016, 24.99305800000002);
-        Point2D.Double sorttiAsemaKivikko = new Point2D.Double(60.236787,25.05102599999998);
-        Point2D.Double sMarketKonala = new Point2D.Double(60.24477779999999, 24.846507100000053);
-        Point2D.Double kMarketKilo = new Point2D.Double(60.21699820000001, 24.78197499999999);
+        RecyclingPoint sello = new RecyclingPoint("Sello", 60.21820809999999, 24.811967600000003);
+        RecyclingPoint HMARC = new RecyclingPoint("Helsinki Metropolitan Area Reuse Center", 60.2198613, 24.664098100000047);
+        RecyclingPoint giganttiForum = new RecyclingPoint("Gigantti Forum", 60.169132, 24.937878899999987);
+        RecyclingPoint verkkokauppa = new RecyclingPoint("Verkkokauppa", 60.15638089999999, 24.92093729999999);
+        RecyclingPoint giganttiLommila = new RecyclingPoint("Gigantti Lommila", 60.2198613, 24.664098100000047);
+        RecyclingPoint sorttiAsemaKonala = new RecyclingPoint("Sortti-Asema Konala", 60.25141129999999, 24.83332489999998);
+        RecyclingPoint sorttiAsemaRuskeasanta = new RecyclingPoint("Sortti-Asema Ruskeasanta", 60.321016, 24.99305800000002);
+        RecyclingPoint sorttiAsemaKivikko = new RecyclingPoint("Sortti-Asema Kivikko", 60.236787,25.05102599999998);
+        RecyclingPoint sMarketKonala = new RecyclingPoint("S-Market Konala", 60.24477779999999, 24.846507100000053);
+        RecyclingPoint kMarketKilo = new RecyclingPoint("K-Market Kilo", 60.21699820000001, 24.78197499999999);
         
         //Plastic
-        Set<Point2D.Double> recyclingPoints1 = new HashSet<>();
+        Set<RecyclingPoint> recyclingPoints1 = new HashSet<>();
         
         recyclingPoints1.add(sello);
         recyclingPoints1.add(HMARC);
@@ -107,7 +107,7 @@ public class GlobalModel {
         Category plastic = new Category("Plastic", 1, "Many types of plastics are accepted by commercial recyclers by contract or as part of co-mingled recycling, where they collected, shredded and extruded for use in new plastic products.", recyclingPoints1);
         
         //Paper & Cardboard
-        Set<Point2D.Double> recyclingPoints2 = new HashSet<>();
+        Set<RecyclingPoint> recyclingPoints2 = new HashSet<>();
         
         recyclingPoints2.add(sello);
         recyclingPoints2.add(HMARC);
@@ -120,7 +120,7 @@ public class GlobalModel {
         Category paperAndCardboard = new Category("Paper & Cardboard", 2, "Clean mixed paper and cardboard is recycled into a variety of paper products. Lower grade products can be recycled or composted as organic waste.", recyclingPoints2);
     
         //Metal
-        Set<Point2D.Double> recyclingPoints3 = new HashSet<>();
+        Set<RecyclingPoint> recyclingPoints3 = new HashSet<>();
         
         recyclingPoints3.add(sello);
         recyclingPoints3.add(HMARC);
@@ -133,7 +133,7 @@ public class GlobalModel {
         Category metal = new Category("Metal", 3, "Making products from recycled metals uses less energy, reduces carbon emissions and uses less water compared with using raw materials.", recyclingPoints3);
     
         //Glass
-        Set<Point2D.Double> recyclingPoints4 = new HashSet<>();
+        Set<RecyclingPoint> recyclingPoints4 = new HashSet<>();
         
         recyclingPoints4.add(sello);
         recyclingPoints4.add(HMARC);
@@ -146,7 +146,7 @@ public class GlobalModel {
         Category glass = new Category("Glass", 4, "Glass is completely recyclable and saves precious energy resources. Making products from recycled glass uses less energy than starting from scratch. Recycled glass is made into new beverage bottles, food jars, insulation and other construction materials.", recyclingPoints4);
     
         //Electrical Waste
-        Set<Point2D.Double> recyclingPoints5 = new HashSet<>();
+        Set<RecyclingPoint> recyclingPoints5 = new HashSet<>();
         
         recyclingPoints5.add(HMARC);
         recyclingPoints5.add(giganttiForum);

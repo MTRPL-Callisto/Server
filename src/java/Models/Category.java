@@ -1,6 +1,5 @@
 package Models;
 
-import java.awt.geom.Point2D;
 import java.util.Set;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -10,13 +9,13 @@ public class Category implements Comparable {
     private String categoryName;
     private int categoryId;
     private String description;
-    private Set<Point2D.Double> recyclingPoints;
+    private Set<RecyclingPoint> recyclingPoints;
     
     public Category() {
       
     }
 
-    public Category(String categoryName, int categoryId, String description, Set<Point2D.Double> recyclingPoints) {
+    public Category(String categoryName, int categoryId, String description, Set<RecyclingPoint> recyclingPoints) {
         this.categoryName = categoryName;
         this.categoryId = categoryId;
         this.description = description;
@@ -51,11 +50,11 @@ public class Category implements Comparable {
     }
 
     @XmlElement
-    public Set<Point2D.Double> getRecyclingPoints() {
+    public Set<RecyclingPoint> getRecyclingPoints() {
         return recyclingPoints;
     }
 
-    public void setRecyclingPoints(Set<Point2D.Double> recyclingPoints) {
+    public void setRecyclingPoints(Set<RecyclingPoint> recyclingPoints) {
         this.recyclingPoints = recyclingPoints;
     }
 
